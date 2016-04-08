@@ -19,9 +19,9 @@ Bonus 2:
 The app
 =====================
 
-## Installation
-
 http://54.171.144.169/
+
+## Installation
 
 ### Backend
 
