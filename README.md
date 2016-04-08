@@ -15,3 +15,28 @@ Bonus 2:
 
  - Write a command that will send an email to the writer of an article if he has notifications from more than 24 hours.
 
+
+The app
+=====================
+
+## Installation
+
+### Backend
+
+```sh
+$ composer install
+$ php app/console doctrine:schema:update
+$ php app/console doctrine:fixtures:load
+```
+### Frontend
+
+```sh
+$ npm install
+$ bower install
+```
+
+### Start server
+
+```sh
+$ php app/console server:run
+```
