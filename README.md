@@ -21,6 +21,8 @@ The app
 
 ## Installation
 
+http://54.171.144.169/
+
 ### Backend
 
 ```sh
