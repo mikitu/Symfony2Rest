@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create New Article</h3>
+</div>
+<form name="userForm" ng-submit="submitArticle()" novalidate>
+    <div class="modal-body">
+        <div class="form-group" ng-class="{'has-error' : !article.title && !userForm.title.$pristine}">
+            <label>Title</label>
+            <input type="text" name="title" ng-model="article.title" class="form-control" />
+        </div>
+        <div class="form-group" ng-class="{'has-error' : !article.excerpt && !userForm.excerpt.$pristine}">
+            <label>Excerpt</label><br />
+            <textarea name="excerpt" ng-model="article.excerpt" rows="4" cols="60" class="form-control" />
+        </div>
+        <div class="form-group" ng-class="{'has-error' : !article.body && !userForm.body.$pristine}">
+            <label>Body</label><br />
+            <textarea name="body" ng-model="article.body" rows="10" cols="60" class="form-control" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        <input type="submit" class="btn btn-primary" value="Submit" ng-disabled="! article.title || ! article.excerpt || !article.body" />
+    </div>
+</form>

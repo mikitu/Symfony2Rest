@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h3 class="modal-title">Login</h3>
+</div>
+<form name="userForm" ng-submit="submitLogin()" novalidate>
+    <div class="modal-body">
+        <div class="form-group" ng-class="{'has-error' : !user.username && !userForm.username.$pristine}">
+            <label>Username</label>
+            <input type="text" name="username" ng-model="user.username" class="form-control" />
+        </div>
+        <div class="form-group" ng-class="{'has-error' : !user.password && !userForm.password.$pristine}">
+            <label>Username</label>
+            <input type="password" name="password" ng-model="user.password" class="form-control" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        <input type="submit" class="btn btn-primary" value="Submit" ng-disabled="! user.username || ! user.password" />
+    </div>
+</form>

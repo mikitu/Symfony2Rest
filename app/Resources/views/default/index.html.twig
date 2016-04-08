@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div ng-view>
+        <div ng-controller="PageController"><div class="fa fa-refresh"></div></div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        #section-1	{
+            background-color: #f0f0f0;
+            color: #ff6d00;
+        }
+        #section-1 h1, #section-1 .h1,
+        #section-1 h2, #section-1 .h2,
+        #section-1 h3, #section-1 .h3,
+        #section-1 h4, #section-1 .h4,
+        #section-1 h5, #section-1 .h5,
+        #section-1 h6, #section-1 .h6,
+        #section-1 a
+        {
+            color: #ff6d00;
+        }
+    </style>
+{% endblock %}

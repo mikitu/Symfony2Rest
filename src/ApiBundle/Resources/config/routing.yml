@@ -1,0 +1,5 @@
+
+get_demos:
+    path:     /demos
+    type:   rest
+    resource: ApiBundle\Controller\Demo

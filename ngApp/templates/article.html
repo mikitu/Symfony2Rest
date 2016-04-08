@@ -1,0 +1,37 @@
+<div class="section section-jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="pull-left"><strong>[[ article.title ]]</strong></h2>
+                <div class="pull-right" class="text-primary" style="font-size: 30px;">
+                    [[ article.rating ]] <uib-rating class="text-success" ng-model="article.rating" max="max" read-only="true" aria-labelledby="default-rating"></uib-rating>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="clearfix">
+                    <p>[[ article.excerpt ]]</p>
+                    <hr />
+                    <p>[[ article.body ]]</p>
+                    <br />
+                    <div class="test" ng-show="article.answers">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <h3>Answers ([[ article.answers.length ]])</h3>
+                            </div>
+                            <div class="pull-right">
+                                <a style="position:relative; left: inherit; margin-left: 0" class="job-cta-link btn btn-lg btn-primary btn-success btn-block" href="#" onclick="return false" ng-click="postAnswer(article.id)">Post an Answer</a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div ng-repeat="answer in article.answers" style="margin-bottom: 15px">
+                            [[ answer.body ]]
+                            <div>By [[ answer.name ]] on [[ answer.hr_date ]]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

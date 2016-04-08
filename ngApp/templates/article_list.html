@@ -1,0 +1,31 @@
+<div class="section section-jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <h2 style="text-align: center;"><strong>Articles</strong></h2>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row" ng-repeat="article in articles">
+            <div class="col-xs-12 job-section">
+                <div class="row">
+                    <div class="job-wrap match-height">
+                        <h4 class="job-title">[[ article.title ]]</h4>
+                        <p>[[ article.excerpt ]]</p>
+                        <p>&nbsp;</p>
+                        <hr />
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                [[ article.rating ]] <i class="glyphicon glyphicon-star"></i>
+                            </div>
+                        <div class="pull-right" ng-show="article.no_answers">
+                            <span class="fa fa-comment"></span> [[ article.no_answers ]]
+                        </div>
+                        <a class="job-cta-link btn btn-lg btn-primary btn-block" href="#" onclick="return false" ng-click="viewArticle(article.id)">View article</a>
+                    </div>
+                </div><!-- /.row -->
+            </div>
+        </div>
+    </div>
+</div>
