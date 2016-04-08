@@ -33,6 +33,7 @@ $ php app/console doctrine:fixtures:load
 ```sh
 $ npm install
 $ bower install
+$ gulp build
 ```
 
 ### Start server
